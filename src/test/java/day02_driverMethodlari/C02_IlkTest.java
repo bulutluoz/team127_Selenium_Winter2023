@@ -48,7 +48,6 @@ public class C02_IlkTest {
         }
 
 
-        Thread.sleep(3000);
         driver.quit();
     }
 }
