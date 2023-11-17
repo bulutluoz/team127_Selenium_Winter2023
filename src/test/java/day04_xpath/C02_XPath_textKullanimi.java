@@ -24,7 +24,7 @@ public class C02_XPath_textKullanimi {
         //1- https://testotomasyonu.com/addremove/ adresine gidin
         driver.get("https://testotomasyonu.com/addremove/");
         //2- Add Element butonuna basin
-        driver.findElement(By.xpath("//button[text()='Add']")).click();
+        driver.findElement(By.xpath("//button[.='Add']")).click();
         //3- Delete butonu’nun gorunur oldugunu test edin
         WebElement removeButonu = driver.findElement(By.xpath("//button[text()='Remove']"));
 
@@ -38,7 +38,7 @@ public class C02_XPath_textKullanimi {
 
         //5- “Add/Remove Elements” yazisinin gorunur oldugunu test edin
 
-        WebElement addRemoveYaziElementi = driver.findElement(By.xpath("//*[text()='Add/Remove Elements']"));
+        WebElement addRemoveYaziElementi = driver.findElement(By.xpath("//*[contains(text(),'Remove Elements')]"));
 
         if (addRemoveYaziElementi.isDisplayed()){
             System.out.println("Add Remove Yazisi gorunme testi PASSED");
